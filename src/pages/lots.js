@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import AllLots from "../components/AllLots"
+import { SEO } from "../components/Seo"
 
 const Lots = () => {
   return (
@@ -14,3 +15,7 @@ const Lots = () => {
 }
 
 export default Lots
+
+export const Head = () => {
+  return <SEO data={{title: "All Whiskey"}} />;
+};

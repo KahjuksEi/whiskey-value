@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import { SEO } from "../components/seo"
 
 const Error = () => {
   return (
@@ -10,3 +11,7 @@ const Error = () => {
 }
 
 export default Error
+
+export const Head = () => {
+  return <SEO data={{title: "Page Not Found!"}} />;
+};

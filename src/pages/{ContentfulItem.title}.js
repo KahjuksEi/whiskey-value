@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import slugify from "slugify"
+import { SEO } from "../components/Seo"
 import Layout from "../components/Layout"
 //чисто создался шабл под страницы
 //где урл страницы равен title из allContentfulItem
@@ -61,3 +62,7 @@ export const query = graphql`
 `
 
 export default LotsTemplate
+
+export const Head = ({data}) => {
+  return <SEO data={{title: data.contentfulItem.title}} />;
+};

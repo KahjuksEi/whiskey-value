@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import LotsList from "../components/LotsList"
 import Layout from "../components/Layout"
+import { SEO } from "../components/Seo"
 
 const TagTemplate = ({ data, pageContext }) => {
   const lots = data.allContentfulItem.nodes
@@ -34,3 +35,7 @@ export const query = graphql`
 `
 
 export default TagTemplate
+
+export const Head = ({pageContext}) => {
+  return <SEO data={{title: `Whiskey by ${pageContext.tag}`}} />;
+};

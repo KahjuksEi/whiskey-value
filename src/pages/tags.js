@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import { SEO } from "../components/Seo"
 import { Link, graphql } from "gatsby"
 import setupTags from "../utils/setupTags"
 import slugify from "slugify"
@@ -27,6 +28,10 @@ const Tags = ({ data }) => {
     </Layout>
   )
 }
+
+export const Head = ({ data }) => {
+  return <SEO data={data} />;
+};
 
 export const query = graphql`
   {

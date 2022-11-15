@@ -10,13 +10,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "whiskey review",
-    description: "Whiskey I got",
-    person: { name: "Ash", age: "33" },
-    complexData: [
-      { name: "Jim Beam", age: "3" },
-      { name: "Jameson", age: "5" },
-    ],
+    title: "Whiskey ranking",
+    description: "Whiskey ranking by producers, types, qualities and more",
   },
   plugins: [
     `gatsby-plugin-image`,

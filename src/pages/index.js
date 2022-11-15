@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
+import { SEO } from "../components/Seo"
 import "../assets/css/style.css"
 
 export default function Home() {
@@ -27,3 +28,7 @@ export default function Home() {
     </Layout>
   )
 }
+
+export const Head = () => {
+  return <SEO data={{title: "Whiskey ranking"}} />;
+};
