@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import slugify from "slugify"
 import Layout from "../components/Layout"
 //чисто создался шабл под страницы
-//где урл страницы равен title из allContentfulRecipe
+//где урл страницы равен title из allContentfulItem
 
 const LotsTemplate = ({ data }) => {
   const {
@@ -13,7 +13,7 @@ const LotsTemplate = ({ data }) => {
     description: { description },
     rating,
     image,
-  } = data.contentfulRecipe
+  } = data.contentfulItem
   const pathToImage = getImage(image)
   const { tags, ingredients, instructions, tools } = content
   return (
@@ -40,8 +40,8 @@ const LotsTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query getSingleRecipe($title: String) {
-    contentfulRecipe(title: { eq: $title }) {
+  query getSingleItem($title: String) {
+    contentfulItem(title: { eq: $title }) {
       title
       content {
         tags

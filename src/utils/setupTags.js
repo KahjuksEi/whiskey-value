@@ -1,8 +1,8 @@
 const setupTags = lots => {
   const allTags = {}
 
-  lots.forEach(recipe => {
-    recipe.content.tags.forEach(tag => {
+  lots.forEach(lot => {
+    lot.content.tags.forEach(tag => {
       // if need quantity of tags
       if (allTags[tag]) {
         allTags[tag] = allTags[tag] + 1

@@ -4,7 +4,7 @@ import LotsList from "../components/LotsList"
 import Layout from "../components/Layout"
 
 const TagTemplate = ({ data, pageContext }) => {
-  const lots = data.allContentfulRecipe.nodes
+  const lots = data.allContentfulItem.nodes
   return (
     <Layout>
       <main class="tag-template">
@@ -16,8 +16,8 @@ const TagTemplate = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query GetRecipeByTag($tag: String) {
-    allContentfulRecipe(
+  query GetItemByTag($tag: String) {
+    allContentfulItem(
       sort: { fields: title, order: ASC }
       filter: { content: { tags: { eq: $tag } } }
     ) {

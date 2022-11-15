@@ -6,8 +6,8 @@ import slugify from "slugify"
 const LotsList = ({ lots = [] }) => {
   return (
     <div class="lotslist">
-      {lots.map(recipe => {
-        const { id, title, image, rating } = recipe
+      {lots.map(lot => {
+        const { id, title, image, rating } = lot
         const pathToImage = getImage(image)
         const slug = slugify(title, { lower: true })
         return (

@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 export const query = graphql`
   {
-    allContentfulRecipe(filter: { featured: { eq: true } }) {
+    allContentfulItem(filter: { featured: { eq: true } }) {
       nodes {
         id
         title
@@ -23,10 +23,10 @@ export const query = graphql`
 
 const AllLots = () => {
   const data = useStaticQuery(query)
-  const lots = data.allContentfulRecipe.nodes
+  const lots = data.allContentfulItem.nodes
   // destructurization example
   // const {
-  //   allContentfulRecipe: { nodes: lots },
+  //   allContentfulItem: { nodes: lots },
   // } = useStaticQuery(query)
   return (
     <section>

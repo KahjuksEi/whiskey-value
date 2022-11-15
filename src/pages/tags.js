@@ -5,7 +5,7 @@ import setupTags from "../utils/setupTags"
 import slugify from "slugify"
 
 const Tags = ({ data }) => {
-  const newTags = setupTags(data.allContentfulRecipe.nodes)
+  const newTags = setupTags(data.allContentfulItem.nodes)
   return (
     <Layout>
       <main class="tags-page">
@@ -30,7 +30,7 @@ const Tags = ({ data }) => {
 
 export const query = graphql`
   {
-    allContentfulRecipe {
+    allContentfulItem {
       nodes {
         content {
           tags
