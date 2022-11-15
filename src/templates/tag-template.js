@@ -18,7 +18,7 @@ const TagTemplate = ({ data, pageContext }) => {
 export const query = graphql`
   query GetItemByTag($tag: String) {
     allContentfulItem(
-      sort: { fields: title, order: ASC }
+      sort: {title: ASC}
       filter: { content: { tags: { eq: $tag } } }
     ) {
       nodes {
